@@ -10,3 +10,14 @@ exports.index = function(req, res){
     });
   });
 };
+
+exports.save = function(req,res) {
+    var article = new Article({
+        title:'common cms use pure js',
+        url:'http://cms.u2l.me/',
+        text:'this is a cms use pure js for future projects'
+    });
+    article.save(function(err){
+        console.log(arguments);
+    });
+};
